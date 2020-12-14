@@ -5,7 +5,7 @@ import java.util.Scanner;
 /*
 A friend mentioned having the choice to create either a web-app or minesweeper for a coding interview.
 This had me thinking about how I would go about creating minesweeper and once I had an idea, I couldn't NOT make it, right?
-The game is fully playable and functional, but it is far from perfect.
+The game is fully playable and functional in the console, but it is far from perfect.
 Some downsides/struggles of this project:
 	-Testing when the output was random each time
 	-Not pretty, I mean the field is a bunch of equal-signs surrounded by brackets
