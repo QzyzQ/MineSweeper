@@ -19,7 +19,7 @@ The first things I would implement to correct some of these downsides were I to 
 	-Figure out more concise conditional logic for the numberFill method
 	-Add labels for columns/rows
 
-Despite the aforementioned flaws I enjoyed making this project. It took me a bit to come up with some of what turned out to be simple solutions. For example,
+Despite the aforementioned flaws I enjoyed making this. It took me a bit to come up with some of what turned out to be simple solutions. For example,
 Instead of using two separate arrays, one that is revealed to the player and one that is hidden, I was planning on making objects out of every location with attributes
 for their hidden values and their shown values only to realize that would have made this implementation more complicated than necessary (at least in this case).
 
