@@ -2,9 +2,34 @@ import java.util.Random;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+A friend mentioned having the choice to create either a web-app or minesweeper for a coding interview.
+This had me thinking about how I would go about creating minesweeper and once I had an idea, I couldn't NOT make it, right?
+The game is fully playable and functional, but it is far from perfect.
+Some downsides/struggles of this project:
+	-Testing when the output was random each time
+	-Not pretty, I mean the field is a bunch of equal-signs surrounded by brackets
+	-Not very user-friendly as one has to count out the columns and rows to figure out which coordinates to type to search
+	-Does not reveal reachable 0-locations when one 0-location is revealed, as an ideal version of the game would.
+	-9 conditions to fill each location in with number of adjacent mines, I'm certain this can be simplified immensely.
+	-Only allows square playing fields (I'm not sure whether this is actually negative in the case of this game)
+	-Doesn't handle anything except for two integer inputs where the second integer is less than the square of the first.
+The first things I would implement to correct some of these downsides were I to revisit this project:
+	-Error handling for incorrect inputs
+	-Figure out more concise conditional logic for the numberFill method
+	-Add labels for columns/rows
+
+Despite the aforementioned flaws I enjoyed making this project. It took me a bit to come up with some of what turned out to be simple solutions. For example,
+Instead of using two separate arrays, one that is revealed to the player and one that is hidden, I was planning on making objects out of every location with attributes
+for their hidden values and their shown values only to realize that would have made this implementation more complicated than necessary (at least in this case).
+
+To run this, simply compile it and then run it with two integer arguments where the only technical constraint is that the square of the first integer must be larger than the second integer.
+Realistically I would keep the first integer below 20 as otherwise it will probably not be very visible in a terminal window.
+In bash, compiling/running this would look like the following:
+	javac Sweep.java
+	java Sweep 10 20
+*/
 public class Sweep{
-
-
 	public static void main(String[] args){
 
 		/*
@@ -20,7 +45,7 @@ public class Sweep{
 		/*
 		Making a one-dimensional array as it will be easier to randomly
 		place the mines within it and then later convert it into two dimensions.
-		Going to fill this array with "E" just as a placehold to be replaced with
+		Going to fill this array with "E" just as a placeholder to be replaced with
 		mines and the numbers indicating adjacent mines.
 		*/
 		String[] emptyField = new String[lineFieldSize];
